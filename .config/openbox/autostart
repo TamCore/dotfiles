@@ -1,0 +1,15 @@
+xbindkeys
+xbacklight -set 70
+
+feh --bg-fill ownCloud/Wallpapers/03148_officesatnight_2560x1440.png
+conky -c ~/.conkyrc &
+xcompmgr &
+cairo-dock -o &
+fbpanel &
+pulseaudio --start &
+volumeicon &
+redshiftgui &
+tilda &
+owncloud &
+chromium --no-startup-window &
+facebook-qt &

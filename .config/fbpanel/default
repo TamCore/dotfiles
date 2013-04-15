@@ -1,0 +1,51 @@
+Global {
+     edge = top
+     allign = center
+     margin = 0
+     widthType = percent
+     width = 100
+     heightType = pixel
+     height = 24
+     setDockType = true
+     setPartialStrut = true
+     Transparent = true
+     TintColor = #000000
+     alpha = 128
+     RoundCorners = false
+     autoHide = false
+}
+
+Plugin {
+    type = space
+    expand = true
+    config {
+        size = 1
+    }
+}
+
+Plugin {
+    type = tray
+}
+
+Plugin {
+    type = space
+    config {
+        size = 5
+    }
+}
+
+Plugin {
+    type = tclock
+    config {
+        ClockFmt = <b>%Y-%m-%d %H:%M</b>
+        ShowCalendar = false
+        ShowTooltip = true
+    }
+}
+
+Plugin {
+    type = space
+    config {
+        size = 5
+    }
+}
