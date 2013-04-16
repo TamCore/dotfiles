@@ -35,11 +35,12 @@ Plugin {
 }
 
 Plugin {
-    type = tclock
+    type = dclock
     config {
-        ClockFmt = <b>%Y-%m-%d %H:%M</b>
-        ShowCalendar = false
-        ShowTooltip = true
+        ShowSeconds = false
+        HoursView = 24
+        TooltipFmt = %Y-%m-%d %H:%M
+        Color = #919191
     }
 }
 
