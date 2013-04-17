@@ -1,9 +1,8 @@
-xbindkeys
-xbacklight -set 70
+#!/bin/sh
+export XDG_CACHE_HOME=/tmp/philipp/.cache
 
 feh --bg-fill ownCloud/Wallpapers/03148_officesatnight_2560x1440.png
 conky -c ~/.conkyrc &
-xcompmgr &
 cairo-dock -o &
 fbpanel &
 pulseaudio --start &
