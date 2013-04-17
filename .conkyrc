@@ -70,7 +70,7 @@ $color${font URW Gothic L:size=11}// network $font${color #cccccc}
 external ip: ${alignr}${execi 600 wget -q -O- http://checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//';}
 ${if_existing /proc/net/route wlan0}device: ${alignr}wlan0
 ap: ${alignr}${wireless_essid wlan0} @ ${wireless_bitrate wlan0}
-status: ${alignr}${wireless_link_qual_perc wlan0}% 
+quality: ${alignr}${wireless_link_qual_perc wlan0}%
 ip: ${alignr}${addrs wlan0}
 down: ${alignr}${downspeed wlan0}k/s (${totaldown wlan0} total)
 up: ${alignr}${upspeed wlan0}k/s (${totalup wlan0} total)${else}${if_existing /proc/net/route eth0}device: ${alignr}eth0
