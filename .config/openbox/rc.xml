@@ -1,4 +1,5 @@
-<?xml version="1.0" ?><openbox_config xmlns="http://openbox.org/3.4/rc" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0"?>
+<openbox_config xmlns="http://openbox.org/3.4/rc" xmlns:xi="http://www.w3.org/2001/XInclude">
   <resistance>
     <strength>10</strength>
     <screen_edge_strength>20</screen_edge_strength>
@@ -663,17 +664,37 @@
     <manageDesktops>yes</manageDesktops>
   </menu>
   <applications>
-<application class="Facebook-qt" name="facebook-qt" type="normal"/>
-<application class="Pidgin" name="Pidgin" role="buddy_list" type="normal"><maximized>vertical</maximized></application>
-<application class="Chromium" name="chromium" role="browser" type="normal"><maximized>yes</maximized></application>
-<application class="Spotify" name="spotify" type="normal"><maximized>yes</maximized></application>
-<application class="Clementine" name="clementine" type="normal"><maximized>yes</maximized></application>
-<application class="Vlc" name="vlc" role="vlc-main" type="normal"><maximized>yes</maximized></application>
-<application class="Gimp-2.8" name="gimp-2.8" role="gimp-image-window" type="normal"/>
-<application class="KeePass2" name="keepass2" type="normal"><maximized>yes</maximized></application>
-<application class="libreoffice-calc" name="VCLSalFrame.DocumentWindow" type="normal"><maximized>yes</maximized></application>
-<application class="libreoffice-writer" name="VCLSalFrame" type="normal"><maximized>yes</maximized></application>
-<application class="Thunderbird" name="Mail" role="3pane" type="normal"><maximized>yes</maximized></application>
-<application class="Ts3client_linux_amd64" name="ts3client_linux_amd64" type="normal"><maximized>yes</maximized></application>
-</applications>
+    <application class="Facebook-qt" name="facebook-qt" type="normal"/>
+    <application class="Pidgin" name="Pidgin" role="buddy_list" type="normal">
+      <maximized>vertical</maximized>
+    </application>
+    <application class="Chromium" name="chromium" role="browser" type="normal">
+      <maximized>yes</maximized>
+    </application>
+    <application class="Spotify" name="spotify" type="normal">
+      <maximized>yes</maximized>
+    </application>
+    <application class="Clementine" name="clementine" type="normal">
+      <maximized>yes</maximized>
+    </application>
+    <application class="Vlc" name="vlc" role="vlc-main" type="normal">
+      <maximized>yes</maximized>
+    </application>
+    <application class="Gimp-2.8" name="gimp-2.8" role="gimp-image-window" type="normal"/>
+    <application class="KeePass2" name="keepass2" type="normal">
+      <maximized>yes</maximized>
+    </application>
+    <application class="libreoffice-calc" name="VCLSalFrame.DocumentWindow" type="normal">
+      <maximized>yes</maximized>
+    </application>
+    <application class="libreoffice-writer" name="VCLSalFrame" type="normal">
+      <maximized>yes</maximized>
+    </application>
+    <application class="Thunderbird" name="Mail" role="3pane" type="normal">
+      <maximized>yes</maximized>
+    </application>
+    <application class="Ts3client_linux_amd64" name="ts3client_linux_amd64" type="normal">
+      <maximized>yes</maximized>
+    </application>
+  </applications>
 </openbox_config>
