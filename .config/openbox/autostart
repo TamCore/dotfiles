@@ -8,6 +8,7 @@ fbpanel &
 (pulseaudio --start && volumeicon) &
 redshiftgui &
 tilda &
+tidybattery &
 owncloud &
 chromium --no-startup-window &
 facebook-qt &
