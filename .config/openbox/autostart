@@ -5,7 +5,7 @@ feh --bg-fill ownCloud/Wallpapers/03148_officesatnight_2560x1440.png
 conky -c ~/.conkyrc &
 cairo-dock -o &
 fbpanel &
-(pulseaudio --start && volumeicon) &
+(pulseaudio --start && volwheel) &
 redshiftgui &
 tilda &
 tidybattery &
