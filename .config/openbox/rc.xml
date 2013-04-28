@@ -680,7 +680,9 @@
     <application class="Vlc" name="vlc" role="vlc-main" type="normal">
       <maximized>yes</maximized>
     </application>
-    <application class="Gimp-2.8" name="gimp-2.8" role="gimp-image-window" type="normal"/>
+    <application class="Gimp-2.8" name="gimp-2.8" role="gimp-image-window" type="normal">
+      <maximized>yes</maximized>
+    </application>
     <application class="KeePass2" name="keepass2" type="normal">
       <maximized>yes</maximized>
     </application>
@@ -694,6 +696,9 @@
       <maximized>yes</maximized>
     </application>
     <application class="Ts3client_linux_amd64" name="ts3client_linux_amd64" type="normal">
+      <maximized>yes</maximized>
+    </application>
+    <application class="Terminator" name="terminator" type="normal">
       <maximized>yes</maximized>
     </application>
   </applications>
