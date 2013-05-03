@@ -14,14 +14,14 @@ Container=_MainDock_
 sep_display=
 
 #s[Default] Launcher's name:
-Name=
+Name=Google Keep
 
 #S+[Default] Image's name or path:
-Icon=
+Icon=chrome-hmjkmjkepdijhoojdojkdfohbdgmmhki-Default
 
 #s[Default] Command to launch on click:
 #{Example: nautilus --no-desktop, gedit, etc. You can even enter a shortkey, e.g. <Alt>F1, <Ctrl>c,  <Ctrl>v, etc}
-Exec=~/bin/minecraft
+Exec=chromium --app-id=hmjkmjkepdijhoojdojkdfohbdgmmhki --profile-directory=Default
 
 
 #X[Extra parameters]
@@ -43,8 +43,8 @@ Terminal=false
 ShowOnViewport=0
 
 #f[0;100] Order you want for this launcher among the others:
-Order=18.75
+Order=15.21875
 
 Icon Type=0
 Type=Application
-Origin=/usr/share/applications/minecraft.desktop
+Origin=/usr/share/applications/chromium.desktop

@@ -1,7 +1,7 @@
 #!/bin/sh
 export XDG_CACHE_HOME=/tmp/philipp/.cache
 
-feh --bg-fill ownCloud/Wallpapers/03148_officesatnight_2560x1440.png
+feh --bg-fill BitPocket/Wallpapers/03148_officesatnight_2560x1440.png
 conky -c ~/.conkyrc &
 cairo-dock -o &
 fbpanel &
@@ -9,7 +9,5 @@ fbpanel &
 redshiftgui &
 tilda &
 tidybattery &
-owncloud &
+owncloud --monoicons &
 chromium --no-startup-window &
-facebook-qt &
-calised &

@@ -21,7 +21,7 @@ Icon=
 
 #s[Default] Command to launch on click:
 #{Example: nautilus --no-desktop, gedit, etc. You can even enter a shortkey, e.g. <Alt>F1, <Ctrl>c,  <Ctrl>v, etc}
-Exec=~/bin/minecraft
+Exec=
 
 
 #X[Extra parameters]
@@ -43,8 +43,8 @@ Terminal=false
 ShowOnViewport=0
 
 #f[0;100] Order you want for this launcher among the others:
-Order=18.75
+Order=14.9921875
 
 Icon Type=0
 Type=Application
-Origin=/usr/share/applications/minecraft.desktop
+Origin=/usr/share/applications/terminator.desktop
