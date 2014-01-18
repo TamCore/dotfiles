@@ -157,7 +157,7 @@
     <right>0</right>
   </margins>
   <dock>
-    <position>TopRight</position>
+    <position>Top</position>
     <!-- (Top|Bottom)(Left|Right|)|Top|Bottom|Left|Right|Floating -->
     <floatingX>0</floatingX>
     <floatingY>0</floatingY>
@@ -664,7 +664,13 @@
     <manageDesktops>yes</manageDesktops>
   </menu>
   <applications>
-    <application class="Facebook-qt" name="facebook-qt" type="normal"/>
+    <application class="fbpanel" name="panel" type="dock">
+      <position force="no">
+        <x>default</x>
+        <monitor>default</monitor>
+        <y>default</y>
+      </position>
+    </application>
     <application class="Pidgin" name="Pidgin" role="buddy_list" type="normal">
       <maximized>vertical</maximized>
     </application>

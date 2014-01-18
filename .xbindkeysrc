@@ -1,2 +1,26 @@
 "keepass --auto-type"
   Control+Alt+a
+
+"amixer set Master toggle"
+  XF86AudioMute
+
+"amixer set Master 3%+"
+  XF86AudioRaiseVolume
+
+"amixer set Master 3%-"
+  XF86AudioLowerVolume
+
+"skippy-xd --activate-window-picker"
+    m:0x10 + b:10   (mouse)
+
+"xrandr --output LVDS1 --off --output VGA1 --off --output HDMI1 --auto && sh ~/.fehbg && killall -SIGUSR1 conky"
+    Control+Alt+H
+
+"xrandr --output HDMI1 --off --output VGA1 --off --output LVDS1 --auto && sh ~/.fehbg && killall -SIGUSR1 conky"
+    Control+Alt+L
+
+"xrandr --output LVDS1 --off --output HDMI1 --off --output VGA1 --auto && sh ~/.fehbg && killall -SIGUSR1 conky"
+    Control+Alt+V
+
+"xrandr --output VGA1 --off --output LVDS1 --auto --output HDMI1 --auto --primary --left-of LVDS1 && sh ~/.fehbg && killall -SIGUSR1 conky"
+    Control+Alt+D
