@@ -53,7 +53,7 @@
       D: omnipresent (on all desktops).
   -->
     <keepBorder>yes</keepBorder>
-    <animateIconify>yes</animateIconify>
+    <animateIconify>no</animateIconify>
     <font place="ActiveWindow">
       <name>Sans</name>
       <size>10</size>
@@ -705,6 +705,12 @@
       <maximized>yes</maximized>
     </application>
     <application class="Terminator" name="terminator" type="normal">
+      <maximized>yes</maximized>
+    </application>
+    <application class="Chromium" name="crx_icdipabjmbhpdkjaihfjoikhjjeneebd" role="pop-up" type="normal">
+      <maximized>yes</maximized>
+    </application>
+    <application class="Chromium" name="crx_ejjicmeblgpmajnghnpcppodonldlgfn" role="pop-up" type="normal">
       <maximized>yes</maximized>
     </application>
   </applications>
