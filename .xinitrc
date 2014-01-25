@@ -14,5 +14,6 @@ fi
 
 export LC_ALL=de_DE.UTF-8
 export LANG=de_DE.UTF-8
+export XDG_CACHE_HOME=/tmp/philipp.cache
 
 exec openbox-session

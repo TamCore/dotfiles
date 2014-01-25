@@ -1,5 +1,4 @@
 #!/bin/sh
-export XDG_CACHE_HOME=/tmp/philipp/.cache
 
 bash /home/philipp/.fehbg &
 bash /home/philipp/bin/lightsOn.sh &
@@ -9,7 +8,6 @@ fbpanel &
 (pulseaudio --start && volwheel) &
 xflux -l 51.341137 -g 6.851654 &
 tidybattery &
-skippy-xd --start-daemon &
 sleep 5 &&
 pidgin &
 
