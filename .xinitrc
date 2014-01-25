@@ -11,6 +11,7 @@ fi
 [ -f /usr/bin/xbacklight ] && xbacklight -set 70 &
 [ -f /usr/bin/setxkbmap ]  && setxkbmap de -variant nodeadkeys &
 [ -f /usr/bin/compton ]    && compton -b &
+[ -f /usr/bin/numlockx ]   && numlockx on &
 
 export LC_ALL=de_DE.UTF-8
 export LANG=de_DE.UTF-8
