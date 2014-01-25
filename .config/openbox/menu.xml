@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<openbox_menu>
-    <menu execute="obfilebrowser --no-parent --no-self --no-hidden" id="root-menu" label="File Browser"/>
-</openbox_menu>
