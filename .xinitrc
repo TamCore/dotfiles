@@ -17,5 +17,6 @@ fi
 [ -f /usr/bin/numlockx ]   && numlockx on &
 
 export XDG_CACHE_HOME=/tmp/philipp.cache
+export XDG_MENU_PREFIX="lxde-"
 
 exec openbox-session
