@@ -47,8 +47,8 @@ core1: ${alignr}${cpu cpu2}%
 ${cpubar cpu2}
 mem: ${alignr}$memperc% 
 ${membar}
-Battery: ${alignr} ${battery_percent BAT1}%
-${battery_bar BAT1}
+Battery: ${alignr} ${execi 10 cat /sys/devices/platform/smapi/BAT0/remaining_percent}%
+${execbar cat /sys/devices/platform/smapi/BAT0/remaining_percent}
 
 $color${font URW Gothic L:size=11}// temps $font${color #cccccc}
 core0: ${alignr}${execi 5 sensors | grep 'Core 0' | cut -c16-22 | sed 's/\.0//'}
@@ -78,7 +78,11 @@ ip: ${alignr}${addrs enp8s0}
 down: ${alignr}${downspeed enp8s0}/s (${totaldown enp8s0} total)
 up: ${alignr}${upspeed enp8s0}/s (${totalup enp8s0} total)${endif}${endif}
 
-${if_existing /proc/net/route tap0}device: ${alignr}tap0
+${if_existing /proc/net/route tun0}device: ${alignr}tun0
+ip: ${alignr}${addrs tun0}
+down: ${alignr}${downspeed tun0}/s (${totaldown tun0} total)
+up: ${alignr}${upspeed tun0}/s (${totalup tun0} total)
+${endif}${if_existing /proc/net/route tap0}device: ${alignr}tap0
 ip: ${alignr}${addrs tap0}
 down: ${alignr}${downspeed tap0}/s (${totaldown tap0} total)
 up: ${alignr}${upspeed tap0}/s (${totalup tap0} total)
