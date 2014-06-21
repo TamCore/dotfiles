@@ -3,7 +3,7 @@ Global {
     allign = left
     margin = 0
     widthType = pixel
-    width = 1920
+    width = 1919
     heightType = pixel
     height = 24
     setDockType = true

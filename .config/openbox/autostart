@@ -2,7 +2,8 @@
 
 bash /home/philipp/.fehbg &
 bash /home/philipp/bin/lightsOn.sh &
-conky -c ~/.conkyrc &
+bash /home/philipp/bin/xrandr_hotplug.sh &
+(while true; do conky -c ~/.conkyrc; done) &
 cairo-dock -o &
 fbpanel &
 (pulseaudio --start && volwheel) &
