@@ -6,7 +6,7 @@ bash /home/philipp/bin/xrandr_hotplug.sh &
 (while true; do conky -c ~/.conkyrc; done) &
 cairo-dock -o &
 fbpanel &
-(pulseaudio --start && volwheel) &
+volwheel &
 xflux -l 51.341137 -g 6.851654 &
 sleep 5 &&
 pidgin &
