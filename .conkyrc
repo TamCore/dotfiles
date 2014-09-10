@@ -68,15 +68,18 @@ ${fs_bar /storage}${endif}
 
 $color${font URW Gothic L:size=11}// network $font${color #cccccc}
 external ip: ${alignr}${execi 600 wget -q -O- http://checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//';}
+
 ${if_existing /proc/net/route wlp5s0}device: ${alignr}wlp5s0
 ap: ${alignr}${wireless_essid wlp5s0} @ ${wireless_bitrate wlp5s0}
 quality: ${alignr}${wireless_link_qual_perc wlp5s0}%
 ip: ${alignr}${addrs wlp5s0}
 down: ${alignr}${downspeed wlp5s0}/s (${totaldown wlp5s0} total)
-up: ${alignr}${upspeed wlp5s0}/s (${totalup wlp5s0} total)${else}${if_existing /proc/net/route enp8s0}device: ${alignr}enp8s0
+up: ${alignr}${upspeed wlp5s0}/s (${totalup wlp5s0} total)${endif}
+
+${if_existing /proc/net/route enp8s0}device: ${alignr}enp8s0
 ip: ${alignr}${addrs enp8s0}
 down: ${alignr}${downspeed enp8s0}/s (${totaldown enp8s0} total)
-up: ${alignr}${upspeed enp8s0}/s (${totalup enp8s0} total)${endif}${endif}
+up: ${alignr}${upspeed enp8s0}/s (${totalup enp8s0} total)${endif}
 
 ${if_existing /proc/net/route tun0}device: ${alignr}tun0
 ip: ${alignr}${addrs tun0}
