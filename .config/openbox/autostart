@@ -2,7 +2,7 @@
 
 bash /home/philipp/.fehbg &
 bash /home/philipp/bin/lightsOn.sh &
-bash /home/philipp/bin/xrandr_hotplug.sh &
+(while true; do bash /home/philipp/bin/autorandr.sh; done) &
 (while true; do conky -c ~/.conkyrc; done) &
 cairo-dock -o &
 fbpanel &

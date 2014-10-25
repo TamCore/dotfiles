@@ -13,12 +13,13 @@ fi
 [ -f /usr/bin/xbindkeys ]  && xbindkeys &
 [ -f /usr/bin/xbacklight ] && xbacklight -set 70 &
 [ -f /usr/bin/setxkbmap ]  && setxkbmap de -variant nodeadkeys &
-[ -f /usr/bin/compton ]    && compton -b &
+[ -f /usr/bin/compton ]    && compton --backend glx --paint-on-overlay --glx-no-stencil --vsync opengl -b &
 [ -f /usr/bin/numlockx ]   && numlockx on &
 [ -f /usr/bin/xscreensaver ] && xscreensaver -no-splash &
 
 export XDG_CACHE_HOME=/tmp/philipp.cache
 export XDG_MENU_PREFIX="lxde-"
+export VDPAU_DRIVER=va_gl
 
 synclient TouchpadOff=1
 
