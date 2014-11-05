@@ -9,5 +9,4 @@ fbpanel &
 (pulseaudio --start && volwheel) &
 xflux -l 51.341137 -g 6.851654 &
 (sleep 5 && pidgin) &
-btsync-gui &
 

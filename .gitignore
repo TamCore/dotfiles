@@ -1,4 +1,2 @@
 *.desktop
 .gtk-bookmarks
-.config/cairo-dock/current_theme/launchers/*
-.config/cairo-dock/current_theme/plug-ins/*
