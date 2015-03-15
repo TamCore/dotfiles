@@ -45,14 +45,18 @@ core0: ${alignr}${cpu cpu1}%
 ${cpubar cpu1}
 core1: ${alignr}${cpu cpu2}% 
 ${cpubar cpu2}
+core1: ${alignr}${cpu cpu3}% 
+${cpubar cpu3}
+core1: ${alignr}${cpu cpu4}% 
+${cpubar cpu4}
 mem: ${alignr}$memperc% 
 ${membar}
 Battery: ${alignr} ${execi 10 cat /sys/devices/platform/smapi/BAT0/remaining_percent}%
 ${execbar cat /sys/devices/platform/smapi/BAT0/remaining_percent}
 
 $color${font URW Gothic L:size=11}// temps $font${color #cccccc}
-core0: ${alignr}${execi 5 sensors | grep 'Core 0' | cut -c16-22 | sed 's/\.0//'}
-core1: ${alignr}${execi 5 sensors | grep 'Core 1' | cut -c16-22 | sed 's/\.0//'}
+core0-1: ${alignr}${execi 5 sensors | grep 'Core 0' | cut -c16-22 | sed 's/\.0//'}
+core2-3: ${alignr}${execi 5 sensors | grep 'Core 2' | cut -c16-22 | sed 's/\.0//'}
 hdd: ${alignr}${execi 5 nc localhost 7634 | grep -o '[0-9]\+' | tail -n1}°C
 ssd: ${alignr}${execi 5 sudo smartctl -A /dev/sda | grep ^190 | grep -o '[0-9]\+' | tail -n1}°C
 
@@ -69,17 +73,17 @@ ${fs_bar /storage}${endif}
 $color${font URW Gothic L:size=11}// network $font${color #cccccc}
 external ip: ${alignr}${execi 600 wget -q -O- http://checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//';}
 
-${if_existing /proc/net/route wlp5s0}device: ${alignr}wlp5s0
-ap: ${alignr}${wireless_essid wlp5s0} @ ${wireless_bitrate wlp5s0}
-quality: ${alignr}${wireless_link_qual_perc wlp5s0}%
-ip: ${alignr}${addrs wlp5s0}
-down: ${alignr}${downspeed wlp5s0}/s (${totaldown wlp5s0} total)
-up: ${alignr}${upspeed wlp5s0}/s (${totalup wlp5s0} total)${endif}
+${if_existing /proc/net/route wlp3s0}device: ${alignr}wlp3s0
+ap: ${alignr}${wireless_essid wlp3s0} @ ${wireless_bitrate wlp3s0}
+quality: ${alignr}${wireless_link_qual_perc wlp3s0}%
+ip: ${alignr}${addrs wlp3s0}
+down: ${alignr}${downspeed wlp3s0}/s (${totaldown wlp3s0} total)
+up: ${alignr}${upspeed wlp3s0}/s (${totalup wlp3s0} total)${endif}
 
-${if_existing /proc/net/route enp8s0}device: ${alignr}enp8s0
-ip: ${alignr}${addrs enp8s0}
-down: ${alignr}${downspeed enp8s0}/s (${totaldown enp8s0} total)
-up: ${alignr}${upspeed enp8s0}/s (${totalup enp8s0} total)${endif}
+${if_existing /proc/net/route enp4s0}device: ${alignr}enp4s0
+ip: ${alignr}${addrs enp4s0}
+down: ${alignr}${downspeed enp4s0}/s (${totaldown enp4s0} total)
+up: ${alignr}${upspeed enp4s0}/s (${totalup enp4s0} total)${endif}
 
 ${if_existing /proc/net/route tun0}device: ${alignr}tun0
 ip: ${alignr}${addrs tun0}

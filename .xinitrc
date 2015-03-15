@@ -13,7 +13,7 @@ fi
 [ -f /usr/bin/xbindkeys ]  && xbindkeys &
 [ -f /usr/bin/xbacklight ] && xbacklight -set 70 &
 [ -f /usr/bin/setxkbmap ]  && setxkbmap de -variant nodeadkeys &
-[ -f /usr/bin/compton ]    && compton --backend glx --paint-on-overlay --glx-no-stencil --vsync opengl -b &
+[ -f /usr/bin/compton ]    && compton -CG --paint-on-overlay --backend xrender --vsync opengl -b &
 [ -f /usr/bin/numlockx ]   && numlockx on &
 [ -f /usr/bin/xscreensaver ] && xscreensaver -no-splash &
 

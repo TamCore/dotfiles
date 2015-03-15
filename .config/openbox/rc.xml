@@ -1,5 +1,4 @@
-<?xml version="1.0"?>
-<openbox_config xmlns="http://openbox.org/3.4/rc" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" ?><openbox_config xmlns="http://openbox.org/3.4/rc" xmlns:xi="http://www.w3.org/2001/XInclude">
   <resistance>
     <strength>10</strength>
     <screen_edge_strength>20</screen_edge_strength>
@@ -121,10 +120,10 @@
     <number>4</number>
     <firstdesk>1</firstdesk>
     <names>
-      <!-- set names up here if you want to, like this:
-    <name>desktop 1</name>
-    <name>desktop 2</name>
-    -->
+      <name>1</name>
+      <name>2</name>
+      <name>3</name>
+      <name>4</name>
     </names>
     <popupTime>0</popupTime>
     <!-- The number of milliseconds to show the popup for when switching
@@ -706,7 +705,7 @@
     </application>
     <application class="Terminator" name="terminator" type="normal">
       <maximized>yes</maximized>
-    </application>
+    <decor>default</decor></application>
     <application class="Chromium" name="crx_icdipabjmbhpdkjaihfjoikhjjeneebd" role="pop-up" type="normal">
       <maximized>yes</maximized>
     </application>
