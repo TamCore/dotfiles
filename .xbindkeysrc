@@ -12,3 +12,6 @@
 
 "bash /home/philipp/bin/lockscreen.sh"
     Mod2+Mod4+L
+
+"terminator --new-tab"
+    Mod2+Mod4 + t
