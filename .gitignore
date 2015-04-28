@@ -1,3 +1,4 @@
 *.desktop
 .gtk-bookmarks
 .config/cairo-dock/current_theme/launchers/*.desktop
+.config/Trolltech.conf

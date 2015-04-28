@@ -10,8 +10,11 @@
 "amixer set Master 5%-"
   XF86AudioLowerVolume
 
-"bash /home/philipp/bin/lockscreen.sh"
+"bash ~/bin/lockscreen.sh"
     Mod2+Mod4+L
 
 "terminator --new-tab"
     Mod2+Mod4 + t
+
+"bash ~/bin/500px.sh --local"
+    Mod2+Mod4 + b
