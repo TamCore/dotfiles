@@ -712,5 +712,6 @@
     <application class="Chromium" name="crx_ejjicmeblgpmajnghnpcppodonldlgfn" role="pop-up" type="normal">
       <maximized>yes</maximized>
     </application>
-  </applications>
+  <application class="Subl3" name="subl3" type="normal"><maximized>yes</maximized></application>
+</applications>
 </openbox_config>
