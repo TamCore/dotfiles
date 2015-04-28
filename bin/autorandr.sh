@@ -5,26 +5,28 @@ SLEEP="1s"
 CONF_RUN="sleep 2 && sh $HOME/.fehbg && killall -SIGUSR1 conky && killall -SIGUSR1 tint2"
 
 # only LVDS1 connected
-# - deconfigure HDMI1 and VGA1
-# - auto-configure VGA1 and use as primary
+# - deconfigure everything except LVDS1 (done automatically)
+# - auto-configure LVDS1 and use as primary (done automatically)
+# - tell pulseaudio to use the laptop's built-in speakers
 CONF_LVDS1_RUN="pacmd set-card-profile 0 output:analog-stereo+input:analog-stereo"
 
 # only HDMI1 connected
-# deconfigure VGA1 and LVDS1
-# - auto-configure HDMI1 and use as primary
+# - deconfigure everything except HDMI1 (done automatically)
+# - auto-configure HDMI1 and use as primary (done automatically)
+# - tell pulseaudio to redirect audio through hdmi
 CONF_HDMI1_RUN="pacmd set-card-profile 0 output:hdmi-stereo+input:analog-stereo; amixer set Master 1+"
 
 # LVDS1 and VGA1 connected
-# - deconfigure HDMI1
+# - deconfigure everything except LVDS1 and VGA1 (done automatically)
 # - auto-configure LVDS1 and VGA1
-# - set VGA1 as primary, left of LVDS1
+# - set VGA1 as primary and place it to the left of LVDS1
 CONF_LVDS1_VGA1="--output LVDS1 --auto --output VGA1 --auto --primary --left-of LVDS1"
 CONF_LVDS1_VGA1_RUN="pacmd set-card-profile 0 output:analog-stereo+input:analog-stereo"
 
 # LVDS1 and HDMI1 connected
-# - deconfigure VGA1
+# - deconfigure everything except LVDS1 and HDMI1 (done automatically)
 # - auto-configure LVDS1 and HDMI1
-# - set HDMI1 as primary, left of LVDS1
+# - set HDMI1 as primary and place it to the left of LVDS1
 CONF_LVDS1_HDMI1="--output LVDS1 --auto --output HDMI1 --auto --primary --left-of LVDS1"
 CONF_LVDS1_HDMI1_RUN="pacmd set-card-profile 0 output:hdmi-stereo+input:analog-stereo; amixer set Master 1+"
 
