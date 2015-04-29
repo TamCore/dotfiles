@@ -40,7 +40,7 @@ do
   while read line
   do
     output="${line%% connected*}"
-    if [[ $output =~ LVDS* ]] && [ $( grep -c closed /proc/acpi/button/*/LID/state ) -eq 1 ]
+    if [[ $output =~ LVDS* ]] && [ $( grep -c closed /proc/acpi/button/*/LID*/state ) -eq 1 ]
     then
       echo "found ${output} but lid is closed.."
       CONF_OFF="--output $output --off"
