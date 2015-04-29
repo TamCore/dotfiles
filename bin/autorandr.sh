@@ -37,6 +37,7 @@ do
   CONFIG="CONF"
   CONF_OFF=""
   DISPLAY_COUNT=0
+  XRANDR="$(xrandr --current)"
   while read line
   do
     output="${line%% connected*}"
@@ -49,11 +50,11 @@ do
       CONFIG="${CONFIG}_${output}"
       DISPLAY_COUNT=$((DISPLAY_COUNT+1))
     fi
-  done < <(xrandr --current | grep ' connected')
+  done < <(grep ' connected' <<< "$XRANDR")
 
   if [ "$CURRENT" != "$CONFIG" ]
   then
-    CONF_OFF="$CONF_OFF $(xrandr --current | sed -n -r 's/(.*) disconnected(.*)/--output \1 --off/p' | xargs)"
+    CONF_OFF="$CONF_OFF $(sed -n -r 's/(.*) disconnected(.*)/--output \1 --off/p' <<< "$XRANDR" | xargs)"
     if [ "$DISPLAY_COUNT" = "1" ]
     then
       declare $CONFIG="--output $output --auto"
